@@ -58,6 +58,14 @@ Include `intro-animation.js` at the end of your `<body>` tag:
 <script src="intro-animation.js"></script>
 ```
 
+## Important Notes
+
+### About Cursor Effects
+
+This integration **preserves your existing cursor effects** from your portfolio. The animation overlay only displays during the intro (first 3 seconds), then your portfolio's normal cursor behavior takes over.
+
+If you want to keep your portfolio's custom cursor effect (like the one in `cursoreffect.js`), simply keep that script loaded in your portfolio HTML. It will automatically work once the intro completes.
+
 ## Customization
 
 ### Change the Display Name
