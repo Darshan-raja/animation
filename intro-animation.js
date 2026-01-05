@@ -4,12 +4,18 @@ const count = 12000;
 let animationComplete = false;
 
 function init() {
+    const container = document.getElementById('intro-container');
+    if (!container) {
+        console.error('intro-container element not found. Make sure you have <div id="intro-container"></div> in your HTML.');
+        return;
+    }
+
     scene = new THREE.Scene();
     camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setClearColor(0x000000);
-    document.getElementById('intro-container').appendChild(renderer.domElement);
+    container.appendChild(renderer.domElement);
 
     camera.position.z = 25;
 
@@ -165,6 +171,11 @@ function fadeOutIntro() {
     animationComplete = true;
     const overlay = document.getElementById('intro-overlay');
     const portfolioContent = document.getElementById('portfolio-content');
+    
+    if (!overlay || !portfolioContent) {
+        console.error('Required elements not found. Make sure you have intro-overlay and portfolio-content divs.');
+        return;
+    }
     
     // Fade out the intro
     overlay.classList.add('fade-out');

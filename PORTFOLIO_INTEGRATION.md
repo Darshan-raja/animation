@@ -45,6 +45,8 @@ Find your `<head>` section and add these script tags AFTER the existing font lin
 </head>
 ```
 
+**Note:** For production sites, consider downloading Three.js and GSAP locally or adding CDN integrity hashes for security.
+
 #### 2.2: Add Intro Overlay Structure
 
 Add this code RIGHT AFTER the opening `<body>` tag and BEFORE your `<header>`:
